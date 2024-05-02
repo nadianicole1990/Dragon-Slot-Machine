@@ -1,1 +1,13 @@
-alert("Dragons are pretty cool.")
+/*----- constants -----*/
+
+
+/*----- state variables -----*/
+
+
+/*----- cached elements  -----*/
+
+
+/*----- event listeners -----*/
+
+
+/*----- functions -----*/
