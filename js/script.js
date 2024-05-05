@@ -5,53 +5,43 @@
 const slotSymbols = [
     {
         symbolPosition: 1,
-        symbolName: "egg",
-        symbolValue: 0,
+        symbolName: "gold-dragon",
     },
     {
         symbolPosition: 2,
-        symbolName: "fire",
-        symbolValue: 0,
+        symbolName: "wild",
     },
     {
         symbolPosition: 3,
-        symbolName: "baby-dragon",
-        symbolValue: 0,
+        symbolName: "color-dragon",
     },
     {
         symbolPosition: 4,
-        symbolName: "dragon",
-        symbolValue: 0,
+        symbolName: "seven",
     },
     {
         symbolPosition: 5,
-        symbolName: "sevens",
-        symbolValue: 0,
+        symbolName: "white-dragon",
     },
     {
         symbolPosition: 6,
-        symbolName: "one-bar",
-        symbolValue: 0,
+        symbolName: "jackpot",
     },
     {
         symbolPosition: 7,
-        symbolName: "two-bar",
-        symbolValue: 0,
+        symbolName: "gold-egg",
     },
     {
         symbolPosition: 8,
-        symbolName: "three-bar",
-        symbolValue: 0,
+        symbolName: "fire-bowl",
     },
     {
         symbolPosition: 9,
-        symbolName: "wild",
-        symbolValue: 0,
+        symbolName: "color-egg",
     },
     {
         symbolPosition: 10,
-        symbolName: "jackpot",
-        symbolValue: 0,
+        symbolName: "white-egg",
     },
 ]
 // Store pay table info in object?
@@ -74,3 +64,8 @@ const slotSymbols = [
 /*----- future features -----*/
 // Multiplier symbols
 // Sticky symbols
+
+// Predetermined Possible Conditions
+// SET NUMBER OF WIN CONDITIONS
+// SET LOSE CONDITIONS
+// Math.random && Other

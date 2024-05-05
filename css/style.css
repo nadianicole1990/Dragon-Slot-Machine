@@ -1,3 +1,85 @@
-body {
-    background-color: aquamarine;
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+      'header header header header header'
+      'machine machine machine machine paytable'
+      'machine machine machine machine paytable'
+      'machine machine machine machine paytable'
+      'machine machine machine machine paytable'
+      'credits credits credits credits dragon'
+      'buttons buttons buttons buttons dragon'
+      'footer footer footer footer footer';
+}
+
+#slot-machine {
+    grid-area: machine;
+}
+
+.slot-symbol {
+    width: 100px;
+}
+
+#gold-dragon {
+    visibility: hidden;
+}
+
+#wild {
+    visibility: hidden;
+}
+
+#color-dragon {
+    visibility: hidden;
+}
+
+#seven {
+    visibility: hidden;
+}
+
+#white-dragon {
+    visibility: hidden;
+}
+
+#jackpot {
+    visibility: hidden;
+}
+
+#gold-egg {
+    visibility: hidden;
+}
+
+#fire-bowl {
+    visibility: hidden;
+}
+
+#color-egg {
+    visibility: hidden;
+}
+
+#white-egg {
+    visibility: hidden;
+}
+
+#credits {
+    grid-area: credits;
+}
+
+#buttons {
+    grid-area: buttons;
+}
+
+#paytable {
+    grid-area: paytable;
+}
+
+#paytable>img {
+    width: 500px;
+}
+
+#dragon {
+    grid-area: dragon;
+}
+
+#dragon>img {
+    width: 500px;
 }

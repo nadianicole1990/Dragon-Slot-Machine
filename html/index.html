@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>Dragon Slot Machine</header>
-    <div id="slot-machine-visual">
+    <div id="slot-machine">
         <div id="paylines">
             <div class="payline" id="payline-one"></div>
             <div class="payline" id="payline-two"></div>
@@ -17,55 +17,35 @@
         </div>
         <div id="reels">
             <div class="reel" id="reel-one">
-                <img class="slot-symbol" id ="egg" src=""/>
-                <img class="slot-symbol" id ="fire" src=""/>
-                <img class="slot-symbol" id ="baby-dragon" src=""/>
-                <img class="slot-symbol" id ="dragon" src=""/>
-                <img class="slot-symbol" id ="sevens" src=""/>
-                <img class="slot-symbol" id ="one-bar" src=""/>
-                <img class="slot-symbol" id ="two-bar" src=""/>
-                <img class="slot-symbol" id ="three-bar" src=""/>
-                <img class="slot-symbol" id ="wild" src=""/>
-                <img class="slot-symbol" id ="jackpot" src=""/>
-            </div>
-            <div class="reel" id="reel-two">
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-            </div>
-            <div class="reel" id="reel-three">
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
-                <img class="slot-symbol" id ="" src=""/>
+                <img class="slot-symbol" id ="gold-dragon" src="../images/dragon-gold.png"/>
+                <img class="slot-symbol" id ="wild" src="..//images/wild.png"/>
+                <img class="slot-symbol" id ="color-dragon" src="../images/dragon-multi.png"/>
+                <img class="slot-symbol" id ="seven" src="../images/seven.png"/>
+                <img class="slot-symbol" id ="white-dragon" src="../images/dragon-white.png"/>
+                <img class="slot-symbol" id ="jackpot" src="../images/jackpot.png"/>
+                <img class="slot-symbol" id ="gold-egg" src="../images/egg-gold.png"/>
+                <img class="slot-symbol" id ="fire-bowl" src="../images/fire-bowl.png"/>
+                <img class="slot-symbol" id ="color-egg" src="../images/egg-multi.png"/>
+                <img class="slot-symbol" id ="white-egg" src="../images/egg-white.png"/>
             </div>
         </div>
     </div>
-    <div id="slot-machine-interactive">
+    <div id="credits">
+        <div id="credit-target"></div>
+    </div>
+    <div id="buttons">
         <button id="trigger-round"></button>
         <div id="make-wager">
             <button class="wager" id="one-credit"></button>
+            <button class="wager" id="one-credit"></button>
+            <button class="wager" id="one-credit"></button>
         </div>
     </div>
-    <div id="credit-meter">
-        <img id="credits" src=""/>
-        <div id="credit-target"></div>
-    </div>
     <div id="paytable">
-        <img id="table" src=""/>
+        <img id="table" src="../images/paytable.png"/>
+    </div>
+    <div id="dragon">
+        <img src="../images/dragon.png">
     </div>
     <footer>Thanks for playing!</footer>
 </body>
