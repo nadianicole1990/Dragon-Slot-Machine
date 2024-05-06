@@ -3,10 +3,10 @@
     width: 100%;
     grid-template-areas: 
       'header header header header header'
-      'machine machine machine machine paytable'
-      'machine machine machine machine paytable'
-      'machine machine machine machine paytable'
-      'machine machine machine machine paytable'
+      'machine machine machine paytable paytable'
+      'machine machine machine paytable paytable'
+      'machine machine machine paytable paytable'
+      'machine machine machine paytable paytable'
       'credits credits credits credits dragon'
       'buttons buttons buttons buttons dragon'
       'footer footer footer footer footer';
@@ -16,11 +16,15 @@
     grid-area: machine;
 }
 
-.slot-symbol {
-    width: 100px;
+#screen {
+    width: 500px;
 }
 
-#gold-dragon {
+/* .slot-symbol {
+    width: 100px;
+} */
+
+/* #gold-dragon {
     visibility: hidden;
 }
 
@@ -58,7 +62,7 @@
 
 #white-egg {
     visibility: hidden;
-}
+} */
 
 #credits {
     grid-area: credits;

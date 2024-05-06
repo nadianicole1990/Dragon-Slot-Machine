@@ -10,14 +10,18 @@
 <body>
     <header>Dragon Slot Machine</header>
     <div id="slot-machine">
-        <div id="paylines">
+        <img id="screen" src="../images/slot-screen.png">
+        <!-- <div id="paylines">
             <div class="payline" id="payline-one"></div>
             <div class="payline" id="payline-two"></div>
             <div class="payline" id="payline-three"></div>
-        </div>
+        </div> -->
         <div id="reels">
             <div class="reel" id="reel-one">
-                <img class="slot-symbol" id ="gold-dragon" src="../images/dragon-gold.png"/>
+            <div class="reel" id="reel-two">
+            <div class="reel" id="reel-three">
+                <!-- <img id ="reel" src="../images/symbol-reel.png"/> -->
+                <!-- <img class="slot-symbol" id ="gold-dragon" src="../images/dragon-gold.png"/>
                 <img class="slot-symbol" id ="wild" src="..//images/wild.png"/>
                 <img class="slot-symbol" id ="color-dragon" src="../images/dragon-multi.png"/>
                 <img class="slot-symbol" id ="seven" src="../images/seven.png"/>
@@ -26,19 +30,21 @@
                 <img class="slot-symbol" id ="gold-egg" src="../images/egg-gold.png"/>
                 <img class="slot-symbol" id ="fire-bowl" src="../images/fire-bowl.png"/>
                 <img class="slot-symbol" id ="color-egg" src="../images/egg-multi.png"/>
-                <img class="slot-symbol" id ="white-egg" src="../images/egg-white.png"/>
+                <img class="slot-symbol" id ="white-egg" src="../images/egg-white.png"/> -->
             </div>
         </div>
     </div>
     <div id="credits">
-        <div id="credit-target"></div>
+        <div id="creditstarget"></div>
+        <div id="wagertarget"></div>
+        <div id="winningstarget"></div>
     </div>
     <div id="buttons">
-        <button id="trigger-round"></button>
         <div id="make-wager">
-            <button class="wager" id="one-credit"></button>
-            <button class="wager" id="one-credit"></button>
-            <button class="wager" id="one-credit"></button>
+            <button class="wager" id="one-credit">One Credit</button>
+            <button class="wager" id="two-credit">Two Credits</button>
+            <button class="wager" id="three-credit">Three Credits</button>
+            <button id="trigger-round">Play!</button>
         </div>
     </div>
     <div id="paytable">
