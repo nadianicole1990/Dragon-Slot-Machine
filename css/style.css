@@ -1,71 +1,95 @@
-.container {
+body {
     display: grid;
-    width: 100%;
     grid-template-areas: 
-      'header header header header header'
-      'machine machine machine paytable paytable'
-      'machine machine machine paytable paytable'
-      'machine machine machine paytable paytable'
-      'machine machine machine paytable paytable'
-      'credits credits credits credits dragon'
-      'buttons buttons buttons buttons dragon'
-      'footer footer footer footer footer';
+      'header header header'
+      'machine machine machine'
+      'machine machine machine'
+      'machine machine machine'
+      'machine machine machine'
+      'credits credits credits'
+      'buttons buttons buttons'
+      'paytable paytable paytable'
+      'footer footer footer';
+      grid-template-rows: 10px 900px 50px 50px 10px 10px;
+}
+
+header {
+    grid-area: header;
 }
 
 #slot-machine {
     grid-area: machine;
+    background-image: url(../images/slot-screen.png);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 
-#screen {
-    width: 500px;
+.symbol>img {
+    height: 200px;
 }
 
-/* .slot-symbol {
-    width: 100px;
-} */
-
-/* #gold-dragon {
-    visibility: hidden;
+#onetoptarget {
+    position: absolute;
+    top: 25%;
+    left: 22%;
 }
 
-#wild {
-    visibility: hidden;
+#onemiddletarget {
+    position: absolute;
+    top: 48%;
+    left: 22%;
 }
 
-#color-dragon {
-    visibility: hidden;
+#onebottomtarget {
+    position: absolute;
+    top: 71%;
+    left: 22%;
 }
 
-#seven {
-    visibility: hidden;
+#twotoptarget {
+    position: absolute;
+    top: 25%;
+    left: 43%;
 }
 
-#white-dragon {
-    visibility: hidden;
+#twomiddletarget {
+    position: absolute;
+    top: 48%;
+    left: 43%;
 }
 
-#jackpot {
-    visibility: hidden;
+#twobottomtarget {
+    position: absolute;
+    top: 71%;
+    left: 43%;
 }
 
-#gold-egg {
-    visibility: hidden;
+#threetoptarget {
+    position: absolute;
+    top: 25%;
+    left: 64%;
 }
 
-#fire-bowl {
-    visibility: hidden;
+#threemiddletarget {
+    position: absolute;
+    top: 48%;
+    left: 64%;
 }
 
-#color-egg {
-    visibility: hidden;
+#threebottomtarget {
+    position: absolute;
+    top: 71%;
+    left: 64%;
 }
-
-#white-egg {
-    visibility: hidden;
-} */
 
 #credits {
     grid-area: credits;
+}
+
+.display {
+    display: inline;
 }
 
 #buttons {
@@ -77,13 +101,9 @@
 }
 
 #paytable>img {
-    width: 500px;
+    width: 100%;
 }
 
-#dragon {
-    grid-area: dragon;
-}
-
-#dragon>img {
-    width: 500px;
+footer {
+    grid-area: footer;
 }
