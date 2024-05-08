@@ -3,14 +3,10 @@ body {
     grid-template-areas: 
       'header header header'
       'machine machine machine'
-      'machine machine machine'
-      'machine machine machine'
-      'machine machine machine'
       'credits credits credits'
       'buttons buttons buttons'
-      'paytable paytable paytable'
-      'footer footer footer';
-      grid-template-rows: 10px 900px 50px 50px 10px 10px;
+      'paytable paytable paytable';
+      grid-template-rows: 10px 900px 50px 50px 900px 10px;
 }
 
 header {
@@ -32,55 +28,55 @@ header {
 
 #onetoptarget {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 22%;
 }
 
 #onemiddletarget {
     position: absolute;
-    top: 48%;
+    top: 43%;
     left: 22%;
 }
 
 #onebottomtarget {
     position: absolute;
-    top: 71%;
+    top: 66%;
     left: 22%;
 }
 
 #twotoptarget {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 43%;
 }
 
 #twomiddletarget {
     position: absolute;
-    top: 48%;
+    top: 43%;
     left: 43%;
 }
 
 #twobottomtarget {
     position: absolute;
-    top: 71%;
+    top: 66%;
     left: 43%;
 }
 
 #threetoptarget {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 64%;
 }
 
 #threemiddletarget {
     position: absolute;
-    top: 48%;
+    top: 43%;
     left: 64%;
 }
 
 #threebottomtarget {
     position: absolute;
-    top: 71%;
+    top: 66%;
     left: 64%;
 }
 
@@ -102,8 +98,4 @@ header {
 
 #paytable>img {
     width: 100%;
-}
-
-footer {
-    grid-area: footer;
 }

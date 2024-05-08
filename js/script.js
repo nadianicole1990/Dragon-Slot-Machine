@@ -1,7 +1,5 @@
 /*----- constants -----*/
 
-// Store pay table info in object?
-
 // Store symbols in an array of objects
 const slotSymbols = [
     {
@@ -78,8 +76,8 @@ threemiddletarget.innerHTML = slotSymbols[7].imageSource;
 let threeBottom = document.getElementById("threebottomtarget");
 threebottomtarget.innerHTML = slotSymbols[8].imageSource;
 
-let credits = 500;
-let currentWager = 0;
+let credits = 50;
+let wager = 0;
 let winnings = 0;
 
 /*----- state variables -----*/
@@ -106,31 +104,61 @@ threeButton.addEventListener("click", betThree);
 // Decrement credits based on wager
 // Disable whichever two buttons weren't clicked
 function betOne() {
-
+    credits = credits - 1;
+    wager = 1;
+    document.getElementById("oneButton").disabled = false;
+    document.getElementById("twoButton").disabled = true;
+    document.getElementById("threeButton").disabled = true;
 }
 function betTwo() {
-
+    credits = credits - 2;
+    wager = 2;
 }
 function betThree() {
-
+    credits = credits - 3;
+    wager = 3;
 }
 
 // "Spin" Reels: Only 3 positions on the reel visible, Animate change
 // Execute a random number generator
-function spin(reel) {
-    console.log("I should spin.")
-    Math.round(Math.random * slotSymbols.length);
+function spinOne() {
+    let a = Math.round(Math.random() * slotSymbols.length-1);
+    console.log(a);
+    oneTop = document.getElementById("onetoptarget");
+    onetoptarget.innerHTML = slotSymbols[a-1].imageSource;
+    oneMiddle = document.getElementById("onemiddletarget");
+    onemiddletarget.innerHTML = slotSymbols[a].imageSource;
+    oneBottom = document.getElementById("onebottomtarget");
+    onebottomtarget.innerHTML = slotSymbols[a+1].imageSource;
+}
+function spinTwo() {
+    let b = Math.round(Math.random() * slotSymbols.length-1);
+    console.log(b);
+    twoTop = document.getElementById("twotoptarget");
+    twotoptarget.innerHTML = slotSymbols[b-1].imageSource;
+    twoMiddle = document.getElementById("twomiddletarget");
+    twomiddletarget.innerHTML = slotSymbols[b].imageSource;
+    twoBottom = document.getElementById("twobottomtarget");
+    twobottomtarget.innerHTML = slotSymbols[b+1].imageSource;
+}
+function spinThree() {
+    let c = Math.round(Math.random() * slotSymbols.length)-1;
+    console.log(c);
+    threeTop = document.getElementById("threetoptarget");
+    threetoptarget.innerHTML = slotSymbols[c-1].imageSource;
+    threeMiddle = document.getElementById("threemiddletarget");
+    threemiddletarget.innerHTML = slotSymbols[c].imageSource;
+    threeBottom = document.getElementById("threebottomtarget");
+    threebottomtarget.innerHTML = slotSymbols[c+1].imageSource;
 }
 
-// Need a function to execute when play button is clicked
-// Call spin function on each reel
-// Return outcome
 // Play button either disabled until wager, or makes default wager of one credit
 function play() {
     console.log("Game should start.")
-    spin(reelOne);
-    spin(reelTwo);
-    spin(reelThree);
+    spinOne();
+    spinTwo();
+    spinThree();
+    outcome();
 }
 
 // Need a function to "evaluate" results along the play line to determine outcome.
@@ -144,16 +172,10 @@ setInterval(function() {
     const creditsDisplay = document.getElementById("creditstarget");
     creditstarget.innerHTML = credits;
     const wagerDisplay = document.getElementById("wagertarget");
-    wagertarget.innerHTML = currentWager;
+    wagertarget.innerHTML = wager;
     const currentWinDisplay = document.getElementById("winningstarget");
     winningstarget.innerHTML = winnings;
 }, 500)
-
-/*----- notes -----*/
-// Predetermined Possible Conditions
-// SET NUMBER OF WIN CONDITIONS
-// SET LOSE CONDITIONS
-// Math.random && Other
 
 /*----- future features -----*/
 // Multiplier symbols
