@@ -86,8 +86,12 @@ let winnings = 0;
 
 /*----- event listeners -----*/
 
-const playButton = document.querySelector("#trigger-round");
-playButton.addEventListener("click", play); 
+document.getElementById("open-paytable").addEventListener("click", function() {
+    document.querySelector(".paytable").style.display = "flex";
+});
+document.querySelector("#close").addEventListener("click", function() {
+    document.querySelector(".paytable").style.display = "none";
+});
 
 const oneButton = document.querySelector("#one-credit");
 oneButton.addEventListener("click", betOne); 
@@ -96,7 +100,10 @@ const twoButton = document.querySelector("#two-credit");
 twoButton.addEventListener("click", betTwo); 
 
 const threeButton = document.querySelector("#three-credit");
-threeButton.addEventListener("click", betThree); 
+threeButton.addEventListener("click", betThree);
+
+const playButton = document.querySelector("#trigger-round");
+playButton.addEventListener("click", play); 
 
 /*----- functions -----*/
 
