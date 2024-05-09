@@ -177,27 +177,61 @@ function spinThree() {
     threebottomtarget.innerHTML = slotSymbols[c+2].imageSource;
 }
 // This could maybe be a for loop? Seems wordy.
+// Need to evaluate for white egg && color dragon when image is the same, but array position is not.
+// Incorporate slotSymbols.symbolPosition maybe?
 function compareMiddles() {
-    if (a === b && b === c && c === 10) {
-        console.log("Woot we have a white egg win.")
-        } else { if (a === b && b === c && c === 11) {
-            console.log("Woot we have a color dragon win.")
+    // if (a === b && b === c && c === 0) {
+    if (slotSymbols[a].symbolName === "gold-dragon" && slotSymbols[b].symbolName === "gold-dragon" && slotSymbols[c].symbolName === "gold-dragon") {
+        console.log("Woot we have a white egg win.");
+        winnings = 5;
+        credits = credits + 5;
+        // } else { if (a === b && b === c && c === 1) {
+        } else { if (slotSymbols[a].symbolName === "white-egg" && slotSymbols[b].symbolName === "white-egg" && slotSymbols[c].symbolName === "white-egg") {
+            console.log("Woot we have a color dragon win.");
+            winnings = 125;
+            credits = credits + 125;
             } else { if (a === b && b === c && c === 2) {
-                console.log("Woot we have a seven win.")
+                console.log("Woot we have a seven win.");
+                winnings = 25;
+                credits = credits + 25;
                 } else { if (a === b && b === c && c === 3) {
-                    console.log("Woot we have a white dragon win.")
+                    console.log("Woot we have a white dragon win.");
+                    winnings = 75;
+                    credits = credits + 75;
                     } else { if (a === b && b === c && c === 4) {
-                        console.log("Woot we have a jackpot win.")
+                        console.log("Woot we have a jackpot win.");
+                        winnings = 1250;
+                        credits = credits + 1250;
                         } else { if (a === b && b === c && c === 5) {
-                            console.log("Woot we have a gold egg win.")
+                            console.log("Woot we have a gold egg win.");
+                            winnings = 15;
+                            credits = credits + 15;
                             } else { if (a === b && b === c && c === 6) {
-                                console.log("Woot we have a firebowl win.")
+                                console.log("Woot we have a firebowl win.");
+                                winnings = 3;
+                                credits = credits + 3;
                                 } else { if (a === b && b === c && c === 7) {
-                                console.log("Woot we have a color egg win.")
+                                console.log("Woot we have a color egg win.");
+                                winnings = 10;
+                                credits = credits + 10;
                                     } else { if (a === b && b === c && c === 8) {
-                                    console.log("Woot we have a wild win.")
+                                    console.log("Woot we have a wild win.");
+                                    winnings = 1;
+                                    credits = credits + 1;
                                         } else { if (a === b && b === c && c === 9) {
-                                        console.log("Woot we have a gold dragon win.")
+                                        console.log("Woot we have a gold dragon win.");
+                                        winnings = 250;
+                                        credits = credits + 250;
+                                            } else { if (a === b && b === c && c === 10) {
+                                                console.log("Woot we have a white egg win.");
+                                                winnings = 5;
+                                                credits = credits + 5;
+                                                } else { if (a === b && b === c && c === 11) {
+                                                    console.log("Woot we have a color dragon win.");
+                                                    winnings = 125;
+                                                    credits = credits + 125;
+                                                }
+                                            }
                                         }
                                     }
                                 }
