@@ -12,6 +12,37 @@ header {
     grid-area: header;
 }
 
+.paytable {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.paytable-content {
+    height: 1000px;
+    text-align: center;
+    position: relative;
+}
+
+.paytable>img {
+    height: 1000px;
+}
+
+#close {
+    position: absolute;
+    color: black;
+    top: 60px;
+    right: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    transform: rotate(45deg);
+    cursor: default;
+}
+
 #slot-machine {
     grid-area: machine;
     background-image: url(../images/slot-screen.png);
@@ -87,37 +118,6 @@ header {
     display: inline;
 }
 
-#buttons {
+#gamebuttons {
     grid-area: buttons;
-}
-
-.paytable {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.paytable-content {
-    height: 1000px;
-    text-align: center;
-    position: relative;
-}
-
-.paytable>img {
-    height: 1000px;
-}
-
-#close {
-    position: absolute;
-    color: black;
-    top: 60px;
-    right: 60px;
-    font-size: 40px;
-    font-weight: bolder;
-    transform: rotate(45deg);
-    cursor: default;
 }

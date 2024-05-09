@@ -52,6 +52,21 @@ const slotSymbols = [
         symbolName: "wild",
         imageSource: `<img src="../images/wild.png">`
     },
+    {
+        symbolPosition: 1,
+        symbolName: "gold-dragon",
+        imageSource: `<img src="../images/dragon-gold.png">`
+    },
+    {
+        symbolPosition: 2,
+        symbolName: "white-egg",
+        imageSource: `<img src="../images/egg-white.png">`
+    },
+    {
+        symbolPosition: 3,
+        symbolName: "color-dragon",
+        imageSource: `<img src="../images/dragon-multi.png">`
+    },
 ]
 
 let oneTop = document.getElementById("onetoptarget");
@@ -113,9 +128,9 @@ playButton.addEventListener("click", play);
 function betOne() {
     credits = credits - 1;
     wager = 1;
-    document.getElementById("oneButton").disabled = false;
-    document.getElementById("twoButton").disabled = true;
-    document.getElementById("threeButton").disabled = true;
+    // document.getElementById("oneButton").disabled = false;
+    // document.getElementById("twoButton").disabled = true;
+    // document.getElementById("threeButton").disabled = true;
 }
 function betTwo() {
     credits = credits - 2;
@@ -128,35 +143,71 @@ function betThree() {
 
 // "Spin" Reels: Only 3 positions on the reel visible, Animate change
 // Execute a random number generator
+let a;
+let b;
+let c;
 function spinOne() {
-    let a = Math.round(Math.random() * slotSymbols.length-1);
+    a = Math.round(Math.random() * (slotSymbols.length-3));
     console.log(a);
     oneTop = document.getElementById("onetoptarget");
-    onetoptarget.innerHTML = slotSymbols[a-1].imageSource;
+    onetoptarget.innerHTML = slotSymbols[a].imageSource;
     oneMiddle = document.getElementById("onemiddletarget");
-    onemiddletarget.innerHTML = slotSymbols[a].imageSource;
+    onemiddletarget.innerHTML = slotSymbols[a+1].imageSource;
     oneBottom = document.getElementById("onebottomtarget");
-    onebottomtarget.innerHTML = slotSymbols[a+1].imageSource;
+    onebottomtarget.innerHTML = slotSymbols[a+2].imageSource;
 }
 function spinTwo() {
-    let b = Math.round(Math.random() * slotSymbols.length-1);
+    b = Math.round(Math.random() * (slotSymbols.length-3));
     console.log(b);
     twoTop = document.getElementById("twotoptarget");
-    twotoptarget.innerHTML = slotSymbols[b-1].imageSource;
+    twotoptarget.innerHTML = slotSymbols[b].imageSource;
     twoMiddle = document.getElementById("twomiddletarget");
-    twomiddletarget.innerHTML = slotSymbols[b].imageSource;
+    twomiddletarget.innerHTML = slotSymbols[b+1].imageSource;
     twoBottom = document.getElementById("twobottomtarget");
-    twobottomtarget.innerHTML = slotSymbols[b+1].imageSource;
+    twobottomtarget.innerHTML = slotSymbols[b+2].imageSource;
 }
 function spinThree() {
-    let c = Math.round(Math.random() * slotSymbols.length)-1;
+    c = Math.round(Math.random() * (slotSymbols.length-3));
     console.log(c);
     threeTop = document.getElementById("threetoptarget");
-    threetoptarget.innerHTML = slotSymbols[c-1].imageSource;
+    threetoptarget.innerHTML = slotSymbols[c].imageSource;
     threeMiddle = document.getElementById("threemiddletarget");
-    threemiddletarget.innerHTML = slotSymbols[c].imageSource;
+    threemiddletarget.innerHTML = slotSymbols[c+1].imageSource;
     threeBottom = document.getElementById("threebottomtarget");
-    threebottomtarget.innerHTML = slotSymbols[c+1].imageSource;
+    threebottomtarget.innerHTML = slotSymbols[c+2].imageSource;
+}
+// This could maybe be a for loop? Seems wordy.
+function compareMiddles() {
+    if (a === b && b === c && c === 10) {
+        console.log("Woot we have a white egg win.")
+        } else { if (a === b && b === c && c === 11) {
+            console.log("Woot we have a color dragon win.")
+            } else { if (a === b && b === c && c === 2) {
+                console.log("Woot we have a seven win.")
+                } else { if (a === b && b === c && c === 3) {
+                    console.log("Woot we have a white dragon win.")
+                    } else { if (a === b && b === c && c === 4) {
+                        console.log("Woot we have a jackpot win.")
+                        } else { if (a === b && b === c && c === 5) {
+                            console.log("Woot we have a gold egg win.")
+                            } else { if (a === b && b === c && c === 6) {
+                                console.log("Woot we have a firebowl win.")
+                                } else { if (a === b && b === c && c === 7) {
+                                console.log("Woot we have a color egg win.")
+                                    } else { if (a === b && b === c && c === 8) {
+                                    console.log("Woot we have a wild win.")
+                                        } else { if (a === b && b === c && c === 9) {
+                                        console.log("Woot we have a gold dragon win.")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Play button either disabled until wager, or makes default wager of one credit
@@ -165,13 +216,18 @@ function play() {
     spinOne();
     spinTwo();
     spinThree();
-    outcome();
+    compareMiddles();
 }
 
 // Need a function to "evaluate" results along the play line to determine outcome.
 function outcome() {
     console.log("I update credits according to outcome.")
     return winnings;
+}
+function lose() {
+    if (credits === 0) {
+        console.log("GAME OVER")
+    }
 }
 
 //Need a function to regulary update values along the credit line
