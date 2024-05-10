@@ -1,7 +1,7 @@
 /*----- constants -----*/
 
 // Store symbols in an array of objects
-const slotSymbols = [
+const firstReel = [
     {
         symbolPosition: 1,
         symbolName: "gold-dragon",
@@ -66,30 +66,164 @@ const slotSymbols = [
         symbolPosition: 3,
         symbolName: "color-dragon",
         imageSource: `<img src="../images/dragon-multi.png">`
+    }
+]
+const secondReel = [
+    {
+        symbolPosition: 1,
+        symbolName: "wild",
+        imageSource: `<img src="../images/wild.png">`
     },
+    {
+        symbolPosition: 2,
+        symbolName: "seven",
+        imageSource: `<img src="../images/seven.png">`
+    },
+    {
+        symbolPosition: 3,
+        symbolName: "gold-dragon",
+        imageSource: `<img src="../images/dragon-gold.png">`
+    },
+    {
+        symbolPosition: 4,
+        symbolName: "white-egg",
+        imageSource: `<img src="../images/egg-white.png">`
+    },
+    {
+        symbolPosition: 5,
+        symbolName: "white-dragon",
+        imageSource: `<img src="../images/dragon-white.png">`
+    },
+    {
+        symbolPosition: 6,
+        symbolName: "gold-egg",
+        imageSource: `<img src="../images/egg-gold.png">`
+    },
+    {
+        symbolPosition: 7,
+        symbolName: "color-dragon",
+        imageSource: `<img src="../images/dragon-multi.png">`
+    },
+    {
+        symbolPosition: 8,
+        symbolName: "fire-bowl",
+        imageSource: `<img src="../images/fire-bowl.png">`
+    },
+    {
+        symbolPosition: 9,
+        symbolName: "jackpot",
+        imageSource: `<img src="../images/jackpot.png">`
+    },
+    {
+        symbolPosition: 10,
+        symbolName: "color-egg",
+        imageSource: `<img src="../images/egg-multi.png">`
+    },
+    {
+        symbolPosition: 1,
+        symbolName: "wild",
+        imageSource: `<img src="../images/wild.png">`
+    },
+    {
+        symbolPosition: 2,
+        symbolName: "seven",
+        imageSource: `<img src="../images/seven.png">`
+    },
+    {
+        symbolPosition: 3,
+        symbolName: "gold-dragon",
+        imageSource: `<img src="../images/dragon-gold.png">`
+    }
+]
+const thirdReel = [
+    {
+        symbolPosition: 1,
+        symbolName: "gold-dragon",
+        imageSource: `<img src="../images/dragon-gold.png">`
+    },
+    {
+        symbolPosition: 2,
+        symbolName: "color-egg",
+        imageSource: `<img src="../images/egg-multi.png">`
+    },
+    {
+        symbolPosition: 3,
+        symbolName: "seven",
+        imageSource: `<img src="../images/seven.png">`
+    },
+    {
+        symbolPosition: 4,
+        symbolName: "white-egg",
+        imageSource: `<img src="../images/egg-white.png">`
+    },
+    {
+        symbolPosition: 5,
+        symbolName: "wild",
+        imageSource: `<img src="../images/wild.png">`
+    },
+    {
+        symbolPosition: 6,
+        symbolName: "color-dragon",
+        imageSource: `<img src="../images/dragon-multi.png">`
+    },
+    {
+        symbolPosition: 7,
+        symbolName: "fire-bowl",
+        imageSource: `<img src="../images/fire-bowl.png">`
+    },
+    {
+        symbolPosition: 8,
+        symbolName: "white-dragon",
+        imageSource: `<img src="../images/dragon-white.png">`
+    },
+    {
+        symbolPosition: 9,
+        symbolName: "jackpot",
+        imageSource: `<img src="../images/jackpot.png">`
+    },
+    {
+        symbolPosition: 10,
+        symbolName: "gold-egg",
+        imageSource: `<img src="../images/egg-gold.png">`
+    },
+    {
+        symbolPosition: 1,
+        symbolName: "gold-dragon",
+        imageSource: `<img src="../images/dragon-gold.png">`
+    },
+    {
+        symbolPosition: 2,
+        symbolName: "color-egg",
+        imageSource: `<img src="../images/egg-multi.png">`
+    },
+    {
+        symbolPosition: 3,
+        symbolName: "seven",
+        imageSource: `<img src="../images/seven.png">`
+    }
 ]
 
 let oneTop = document.getElementById("onetoptarget");
-onetoptarget.innerHTML = slotSymbols[0].imageSource;
+onetoptarget.innerHTML = firstReel[0].imageSource;
 let oneMiddle = document.getElementById("onemiddletarget");
-onemiddletarget.innerHTML = slotSymbols[1].imageSource;
+onemiddletarget.innerHTML = firstReel[1].imageSource;
 let oneBottom = document.getElementById("onebottomtarget");
-onebottomtarget.innerHTML = slotSymbols[2].imageSource;
+onebottomtarget.innerHTML = firstReel[2].imageSource;
 
 
 let twoTop = document.getElementById("twotoptarget");
-twotoptarget.innerHTML = slotSymbols[3].imageSource;
+twotoptarget.innerHTML = secondReel[0].imageSource;
 let twoMiddle = document.getElementById("twomiddletarget");
-twomiddletarget.innerHTML = slotSymbols[4].imageSource;
+twomiddletarget.innerHTML = secondReel[1].imageSource;
 let twoBottom = document.getElementById("twobottomtarget");
-twobottomtarget.innerHTML = slotSymbols[5].imageSource;
+twobottomtarget.innerHTML = secondReel[2].imageSource;
 
 let threeTop = document.getElementById("threetoptarget");
-threetoptarget.innerHTML = slotSymbols[6].imageSource;
+threetoptarget.innerHTML = thirdReel[0].imageSource;
 let threeMiddle = document.getElementById("threemiddletarget");
-threemiddletarget.innerHTML = slotSymbols[7].imageSource;
+threemiddletarget.innerHTML = thirdReel[1].imageSource;
 let threeBottom = document.getElementById("threebottomtarget");
-threebottomtarget.innerHTML = slotSymbols[8].imageSource;
+threebottomtarget.innerHTML = thirdReel[2].imageSource;
 
 let credits = 50;
 let wager = 0;
@@ -147,91 +281,79 @@ let a;
 let b;
 let c;
 function spinOne() {
-    a = Math.round(Math.random() * (slotSymbols.length-3));
+    a = Math.round(Math.random() * (firstReel.length-3));
     console.log(a);
     oneTop = document.getElementById("onetoptarget");
-    onetoptarget.innerHTML = slotSymbols[a].imageSource;
+    onetoptarget.innerHTML = firstReel[a+1].imageSource;
     oneMiddle = document.getElementById("onemiddletarget");
-    onemiddletarget.innerHTML = slotSymbols[a+1].imageSource;
+    onemiddletarget.innerHTML = firstReel[a].imageSource;
     oneBottom = document.getElementById("onebottomtarget");
-    onebottomtarget.innerHTML = slotSymbols[a+2].imageSource;
+    onebottomtarget.innerHTML = firstReel[a+2].imageSource;
 }
 function spinTwo() {
-    b = Math.round(Math.random() * (slotSymbols.length-3));
+    b = Math.round(Math.random() * (secondReel.length-3));
     console.log(b);
     twoTop = document.getElementById("twotoptarget");
-    twotoptarget.innerHTML = slotSymbols[b].imageSource;
+    twotoptarget.innerHTML = secondReel[b+1].imageSource;
     twoMiddle = document.getElementById("twomiddletarget");
-    twomiddletarget.innerHTML = slotSymbols[b+1].imageSource;
+    twomiddletarget.innerHTML = secondReel[b].imageSource;
     twoBottom = document.getElementById("twobottomtarget");
-    twobottomtarget.innerHTML = slotSymbols[b+2].imageSource;
+    twobottomtarget.innerHTML = secondReel[b+2].imageSource;
 }
 function spinThree() {
-    c = Math.round(Math.random() * (slotSymbols.length-3));
+    c = Math.round(Math.random() * (thirdReel.length-3));
     console.log(c);
     threeTop = document.getElementById("threetoptarget");
-    threetoptarget.innerHTML = slotSymbols[c].imageSource;
+    threetoptarget.innerHTML = thirdReel[c+1].imageSource;
     threeMiddle = document.getElementById("threemiddletarget");
-    threemiddletarget.innerHTML = slotSymbols[c+1].imageSource;
+    threemiddletarget.innerHTML = thirdReel[c].imageSource;
     threeBottom = document.getElementById("threebottomtarget");
-    threebottomtarget.innerHTML = slotSymbols[c+2].imageSource;
+    threebottomtarget.innerHTML = thirdReel[c+2].imageSource;
 }
 // This could maybe be a for loop? Seems wordy.
 // Need to evaluate for white egg && color dragon when image is the same, but array position is not.
 // Incorporate slotSymbols.symbolPosition maybe?
 function compareMiddles() {
-    // if (a === b && b === c && c === 0) {
-    if (slotSymbols[a].symbolName === "gold-dragon" && slotSymbols[b].symbolName === "gold-dragon" && slotSymbols[c].symbolName === "gold-dragon") {
-        console.log("Woot we have a white egg win.");
+    if (firstReel[a].symbolName === "gold-dragon" && secondReel[b].symbolName === "gold-dragon" && thirdReel[c].symbolName === "gold-dragon") {
+        console.log("Woot we have a gold-dragon win.");
         winnings = 5;
         credits = credits + 5;
-        // } else { if (a === b && b === c && c === 1) {
-        } else { if (slotSymbols[a].symbolName === "white-egg" && slotSymbols[b].symbolName === "white-egg" && slotSymbols[c].symbolName === "white-egg") {
-            console.log("Woot we have a color dragon win.");
+        } else { if (firstReel[a].symbolName === "white-egg" && secondReel[b].symbolName === "white-egg" && thirdReel[c].symbolName === "white-egg") {
+            console.log("Woot we have a white-egg win.");
             winnings = 125;
             credits = credits + 125;
-            } else { if (a === b && b === c && c === 2) {
-                console.log("Woot we have a seven win.");
+            } else { if (firstReel[a].symbolName === "color-dragon" && secondReel[b].symbolName === "color-dragon" && thirdReel[c].symbolName === "color-dragon") {
+                console.log("Woot we have a color-dragon win.");
                 winnings = 25;
                 credits = credits + 25;
-                } else { if (a === b && b === c && c === 3) {
-                    console.log("Woot we have a white dragon win.");
+                } else { if (firstReel[a].symbolName === "seven" && secondReel[b].symbolName === "seven" && thirdReel[c].symbolName === "seven") {
+                    console.log("Woot we have a seven win.");
                     winnings = 75;
                     credits = credits + 75;
-                    } else { if (a === b && b === c && c === 4) {
-                        console.log("Woot we have a jackpot win.");
+                    } else { if (firstReel[a].symbolName === "white-dragon" && secondReel[b].symbolName === "white-dragon" && thirdReel[c].symbolName === "white-dragon") {
+                        console.log("Woot we have a white-dragon win.");
                         winnings = 1250;
                         credits = credits + 1250;
-                        } else { if (a === b && b === c && c === 5) {
-                            console.log("Woot we have a gold egg win.");
+                        } else { if (firstReel[a].symbolName === "jackpot" && secondReel[b].symbolName === "jackpot" && thirdReel[c].symbolName === "jackpot") {
+                            console.log("Woot we have a jackpot win.");
                             winnings = 15;
                             credits = credits + 15;
-                            } else { if (a === b && b === c && c === 6) {
-                                console.log("Woot we have a firebowl win.");
+                            } else { if (firstReel[a].symbolName === "gold-egg" && secondReel[b].symbolName === "gold-egg" && thirdReel[c].symbolName === "gold-egg") {
+                                console.log("Woot we have a gold-egg win.");
                                 winnings = 3;
                                 credits = credits + 3;
-                                } else { if (a === b && b === c && c === 7) {
-                                console.log("Woot we have a color egg win.");
+                                } else { if (firstReel[a].symbolName === "fire-bowl" && secondReel[b].symbolName === "fire-bowl" && thirdReel[c].symbolName === "fire-bowl") {
+                                console.log("Woot we have a fire-bowl win.");
                                 winnings = 10;
                                 credits = credits + 10;
-                                    } else { if (a === b && b === c && c === 8) {
-                                    console.log("Woot we have a wild win.");
+                                    } else { if (firstReel[a].symbolName === "color-egg" && secondReel[b].symbolName === "color-egg" && thirdReel[c].symbolName === "color-egg") {
+                                    console.log("Woot we have a color-egg win.");
                                     winnings = 1;
                                     credits = credits + 1;
-                                        } else { if (a === b && b === c && c === 9) {
-                                        console.log("Woot we have a gold dragon win.");
+                                        } else { if (firstReel[a].symbolName === "wild" && secondReel[b].symbolName === "wild" && thirdReel[c].symbolName === "wild") {
+                                        console.log("Woot we have a wild win.");
                                         winnings = 250;
                                         credits = credits + 250;
-                                            } else { if (a === b && b === c && c === 10) {
-                                                console.log("Woot we have a white egg win.");
-                                                winnings = 5;
-                                                credits = credits + 5;
-                                                } else { if (a === b && b === c && c === 11) {
-                                                    console.log("Woot we have a color dragon win.");
-                                                    winnings = 125;
-                                                    credits = credits + 125;
-                                                }
-                                            }
                                         }
                                     }
                                 }
