@@ -1,62 +1,66 @@
 body {
-    display: grid;
-    grid-template-areas: 
-      'header header header'
-      'machine machine machine'
-      'credits credits credits'
-      'buttons buttons buttons';
-    grid-template-rows: 10px 900px 50px 50px 50px;
+    background-color: #c83b81;
 }
 
-header {
-    grid-area: header;
-}
-
-.paytable {
+#title {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.paytable-content {
-    height: 1000px;
-    text-align: center;
-    position: relative;
-}
-
-.paytable>img {
-    height: 1000px;
-}
-
-#close {
-    position: absolute;
-    color: black;
-    top: 60px;
-    right: 60px;
-    font-size: 40px;
-    font-weight: bolder;
-    transform: rotate(45deg);
-    cursor: default;
 }
 
 #slot-machine {
-    grid-area: machine;
     background-image: url(../images/slot-screen.png);
+    height: 80vh;
     background-size: 900px;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
 }
 
-.symbol>img {
+.symbols {
     height: 200px;
 }
 
-#onetoptarget {
+
+.reels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+#reel-one span{
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   padding: 0 45px 0 45px;
+   animation: none;
+}
+
+#reel-two span{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 45px 0 45px;
+    animation: none;
+}
+
+#reel-three span{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 45px 0 45px;
+    animation: none;
+}
+  
+@keyframes spin {
+    from {
+        transform: translateY(0%)
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+
+/* #onetoptarget {
     position: absolute;
     top: 20%;
     left: 22%;
@@ -108,16 +112,39 @@ header {
     position: absolute;
     top: 66%;
     left: 64%;
-}
-
-#credits {
-    grid-area: credits;
-}
+} */
 
 .display {
     display: inline;
 }
 
-#gamebuttons {
-    grid-area: buttons;
+.paytable {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.paytable-content {
+    height: 1000px;
+    text-align: center;
+    position: relative;
+}
+
+.paytable>img {
+    height: 1000px;
+}
+
+#close {
+    position: absolute;
+    color: black;
+    top: 60px;
+    right: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    transform: rotate(45deg);
+    cursor: default;
 }
