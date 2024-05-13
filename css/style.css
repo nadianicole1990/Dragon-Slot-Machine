@@ -1,118 +1,58 @@
 body {
-    background-color: #c83b81;
+    background-image: linear-gradient(#322335, #c83b81, #ffbd59);
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #title {
     width: 100%;
 }
 
-#slot-machine {
-    background-image: url(../images/slot-screen.png);
-    height: 80vh;
-    background-size: 900px;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+.slot-machine {
+    width: 750px;
+    height: 750px;
 }
-
-.symbols {
-    height: 200px;
-}
-
 
 .reels {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-y: hidden;
+    width: 250px;
+    height: 750px;
+    justify-content: space-between;
 }
 
-#reel-one span{
-   display: flex;
-   flex-direction: column;
-   text-align: left;
-   padding: 0 45px 0 45px;
-   animation: none;
+#reel-one {
+    background-image: url("../images/reel-one");
+    background-position: 0 0;
 }
 
-#reel-two span{
+#reel-two {
+    background-image: url("../images/reel-two");
+    background-position: 0 0;
+}
+
+#reel-three {
+    background-image: url("../images/reel-three");
+    background-position: 0 0;
+}
+
+#gamebuttons {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.wager {
     display: flex;
     flex-direction: column;
-    text-align: right;
-    padding: 0 45px 0 45px;
-    animation: none;
 }
 
-#reel-three span{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    padding: 0 45px 0 45px;
-    animation: none;
+#credits {
+    font-family: "orbitron";
+    text-align: left;
+    color: white;
+    font-size: xx-large;
 }
-  
-@keyframes spin {
-    from {
-        transform: translateY(0%)
-    }
-    to{
-        transform: translateY(-100%);
-    }
-}
-
-/* #onetoptarget {
-    position: absolute;
-    top: 20%;
-    left: 22%;
-}
-
-#onemiddletarget {
-    position: absolute;
-    top: 42%;
-    left: 22%;
-}
-
-#onebottomtarget {
-    position: absolute;
-    top: 66%;
-    left: 22%;
-}
-
-#twotoptarget {
-    position: absolute;
-    top: 20%;
-    left: 43%;
-}
-
-#twomiddletarget {
-    position: absolute;
-    top: 42%;
-    left: 43%;
-}
-
-#twobottomtarget {
-    position: absolute;
-    top: 66%;
-    left: 43%;
-}
-
-#threetoptarget {
-    position: absolute;
-    top: 20%;
-    left: 64%;
-}
-
-#threemiddletarget {
-    position: absolute;
-    top: 42%;
-    left: 64%;
-}
-
-#threebottomtarget {
-    position: absolute;
-    top: 66%;
-    left: 64%;
-} */
 
 .display {
     display: inline;
@@ -134,11 +74,42 @@ body {
     position: relative;
 }
 
-.paytable>img {
+.paytable-content>img {
     height: 1000px;
 }
 
 #close {
+    position: absolute;
+    color: black;
+    top: 60px;
+    right: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    transform: rotate(45deg);
+    cursor: default;
+}
+
+#outcome-content-win {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#outcome-content-lose {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#exit {
     position: absolute;
     color: black;
     top: 60px;

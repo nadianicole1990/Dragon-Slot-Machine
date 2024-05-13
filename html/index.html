@@ -5,79 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>Dragon Slot Machine</title>
 </head>
 <body>
     <header>
         <img id="title" src="../images/slay-to-win.png">
     </header>
-    <div id="slot-machine">
-        <div class="reels">
-            <div id="reel-one">
-                <span><img class="symbols" src="../images/dragon-gold.png"></span>
-                <span><img class="symbols" src="../images/egg-white.png"></span>
-                <span><img class="symbols" src="../images/dragon-multi.png"></span>
-                <span><img class="symbols" src="../images/seven.png"></span>
-                <span><img class="symbols" src="../images/dragon-white.png"></span>
-                <span><img class="symbols" src="../images/jackpot.png"></span>
-                <span><img class="symbols" src="../images/egg-gold.png"></span>
-                <span><img class="symbols" src="../images/fire-bowl.png"></span>
-                <span><img class="symbols" src="../images/egg-multi.png"></span>
-                <span><img class="symbols" src="../images/wild.png"></span>
-            </div>
-            <div id="reel-two">
-                <span><img class="symbols" src="../images/dragon-gold.png"></span>
-                <span><img class="symbols" src="../images/egg-white.png"></span>
-                <span><img class="symbols" src="../images/dragon-multi.png"></span>
-                <span><img class="symbols" src="../images/seven.png"></span>
-                <span><img class="symbols" src="../images/dragon-white.png"></span>
-                <span><img class="symbols" src="../images/jackpot.png"></span>
-                <span><img class="symbols" src="../images/egg-gold.png"></span>
-                <span><img class="symbols" src="../images/fire-bowl.png"></span>
-                <span><img class="symbols" src="../images/egg-multi.png"></span>
-                <span><img class="symbols" src="../images/wild.png"></span>
-            </div>
-            <div id="reel-three">
-                <span><img class="symbols" src="../images/dragon-gold.png"></span>
-                <span><img class="symbols" src="../images/egg-white.png"></span>
-                <span><img class="symbols" src="../images/dragon-multi.png"></span>
-                <span><img class="symbols" src="../images/seven.png"></span>
-                <span><img class="symbols" src="../images/dragon-white.png"></span>
-                <span><img class="symbols" src="../images/jackpot.png"></span>
-                <span><img class="symbols" src="../images/egg-gold.png"></span>
-                <span><img class="symbols" src="../images/fire-bowl.png"></span>
-                <span><img class="symbols" src="../images/egg-multi.png"></span>
-                <span><img class="symbols" src="../images/wild.png"></span>
-            </div>
-            <!-- <div id="reel-one">
-                <div class="symbol" id="onetoptarget"></div>
-                <div class="symbol" id="onemiddletarget"></div>
-                <div class="symbol" id="onebottomtarget"></div>
-            </div>
-            <div id="reel-two">
-                <div class="symbol" id="twotoptarget"></div>
-                <div class="symbol" id="twomiddletarget"></div>
-                <div class="symbol" id="twobottomtarget"></div>
-            </div>
-            <div id="reel-three">
-                <div class="symbol" id="threetoptarget"></div>
-                <div class="symbol" id="threemiddletarget"></div>
-                <div class="symbol" id="threebottomtarget"></div>
-            </div> -->
+    <div class="slot-machine">
+        <div class="reels" id="reel-one">
+            <div id="one"></div>
         </div>
-    </div>
-    <div id="credits">
-        <p class="display">Credits:</p>
-        <div class="display" id="creditstarget"></div>
-        <p class="display">Wager:</p>
-        <div class="display" id="wagertarget"></div>
-        <p class="display">Most Recent Win:</p>
-        <div class="display" id="winningstarget"></div>
+        <div class="reels" id="reel-two">
+            <div id="two"></div>
+        </div>
+        <div class="reels" id="reel-three">
+            <div id="three"></div>
+        </div>
     </div>
     <div id="gamebuttons">
-        <div id="paytable-modal">
-            <button id="open-paytable">Paytable</button>
-        </div>
         <div id="make-wager">
             <button class="wager" id="one-credit">One Credit</button>
             <button class="wager" id="two-credit">Two Credits</button>
@@ -86,10 +34,32 @@
         <div id="play-game">
             <button id="trigger-round">Play!</button>
         </div>
+        <div class="outcome">
+            <div id="outcome-content-win">
+                <h>WIN</h>
+                <div id="exit">+</div>
+            </div>
+            <div id="outcome-content-lose">
+                <h>LOSE</h>
+                <div id="exit">+</div>
+            </div>
+        </div>
+    <div id="credits">
+        <p class="display"><b>Credits:<b></p>
+        <div class="display" id="creditstarget"></div>
+        <p class="display">Wager:</p>
+        <div class="display" id="wagertarget"></div>
+        <p class="display">Most Recent Win:</p>
+        <div class="display" id="winningstarget"></div>
     </div>
-    <div class="paytable">
-        <img src="../images/paytable.png"/>
-        <div id="close">+</div>
+    <div id="paytable-modal">
+        <button id="open-paytable">Paytable</button>
+        <div class="paytable">
+            <div class="paytable-content">
+                <img src="../images/dragon-paytable.png"/>
+            </div>
+            <div id="close">+</div>
+        </div>
     </div>
 </body>
 </html>
