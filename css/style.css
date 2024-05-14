@@ -1,53 +1,90 @@
 body {
     background-image: linear-gradient(#322335, #c83b81, #ffbd59);
     background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-area: 
+    header header header header header,
+    screen screen screen buttons buttons,
+    screen screen screen buttons buttons,
+    display display display display display
 }
 
 #title {
+    grid-area: header;
     width: 100%;
 }
 
 .slot-machine {
+    grid-area: screen;
+    display: flex;
     width: 750px;
     height: 750px;
+    align-items: center;
 }
 
 .reels {
-    width: 250px;
-    height: 750px;
+    background-color: white;
+    display: inline-flex;
+    width: 200px;
+    height: 600px;
     justify-content: space-between;
 }
 
 #reel-one {
-    background-image: url("../images/reel-one");
-    background-position: 0 0;
+    background-image: url(../images/reel-one.png);
+    background-size: 200px;
+    background-repeat: repeat-y;
+    background-position-x: 0;
+    background-position-y: 0;
+    animation-name: spinReel;
+    animation-duration: 6s;
 }
 
 #reel-two {
-    background-image: url("../images/reel-two");
-    background-position: 0 0;
+    background-image: url(../images/reel-two.png);
+    background-size: 200px;
+    background-repeat: repeat-y;
+    background-position-x: 0;
+    background-position-y: 0;
+    animation-name: spinReel;
+    animation-duration: 6s;
+    animation-delay: .5s;
 }
 
 #reel-three {
-    background-image: url("../images/reel-three");
-    background-position: 0 0;
+    background-image: url(../images/reel-three.png);
+    background-size: 200px;
+    background-repeat: repeat-y;
+    background-position-x: 0;
+    background-position-y: 0;
+    animation-name: spinReel;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+@keyframes spinReel {
+    0% {
+        background-position-y: 0
+    }
+    100% {
+        background-position-y: 1800px;
+    }
 }
 
 #gamebuttons {
-    display: inline-flex;
+    grid-area: buttons;
+    display: flex;
     justify-content: flex-end;
 }
 
 .wager {
+    grid-area: buttons;
     display: flex;
     flex-direction: column;
 }
 
 #credits {
+    grid-area: display;
     font-family: "orbitron";
     text-align: left;
     color: white;
@@ -59,6 +96,7 @@ body {
 }
 
 .paytable {
+    grid-area: buttons;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -90,6 +128,7 @@ body {
 }
 
 #outcome-content-win {
+    grid-area: buttons;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -100,6 +139,7 @@ body {
 }
 
 #outcome-content-lose {
+    grid-area: buttons;
     width: 100%;
     height: 100%;
     position: absolute;
