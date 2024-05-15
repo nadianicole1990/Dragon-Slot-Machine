@@ -1,12 +1,12 @@
 
 # Dragon Slot Machine:
-A description of your game. Background info of the game is a nice touch.
+An Exciting, Dragon-Themed Game of Chance that Mimics Early Slot Machines
 
 #### A full-stack web application built as first project.
-<img src="./Images/homeBackground.jpeg" alt="Connect Four Mainpage Screenshot"/>
+<img src="/images/slot-screen.png" alt="slot screen"/>
 
 ## Description
-Connect Four: a two player connection game. First player to get four of the same colored checkers in a row either horizontally, vertically or diagonally wins.
+Words and Stuff
 
 ## Table of Contents
 * [Technologies Used](#technologiesused)
@@ -26,7 +26,6 @@ Connect Four: a two player connection game. First player to get four of the same
 ## <a name="features"></a>Features
 * User begins with a default of 50 credits.
 * User can play multiple rounds of slots, wagering one credit per round.
-
 
 ## <a name="design"></a>Design
 * Design elements implemented using HTML, CSS, and Midjourney AI

@@ -231,8 +231,6 @@ document.getElementById("exitlose").addEventListener("click", function() {
 setInterval(function() {
     const creditsDisplay = document.getElementById("creditstarget");
     creditstarget.innerHTML = credits;
-    // const wagerDisplay = document.getElementById("wagertarget");
-    // wagertarget.innerHTML = wager;
     const currentWinDisplay = document.getElementById("winningstarget");
     winningstarget.innerHTML = winnings;
 }, 500)
