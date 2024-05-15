@@ -41,9 +41,11 @@ An Exciting, Dragon-Themed Game of Chance that Mimics Early Slot Machines.
 * Mock-up Advertisement User can View to Earn Credits
 
 ## <a name="deployment"></a>Deployed Link
+
+* Peep the deployed link:
 [GitHub](https://nadianicole1990.github.io/Dragon-Slot-Machine/)
 
-* You can view the repository:
+* Check out the repository:
 [Github.com](https://github.com/nadianicole1990/Dragon-Slot-Machine)
 
 * If unable to view please go live locally through VS Code
