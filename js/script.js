@@ -1,19 +1,19 @@
 const reelOneOutcome = [
     {
         animation: "spin-one 5s forwards",
-        symbol: "color-dragon"
+        symbol: "jackpot"
     },
     {
         animation: "spin-two 5s forwards",
-        symbol: "gold-egg"
+        symbol: "white-egg"
     },
     {
         animation: "spin-three 5s forwards",
-        symbol: "seven"
+        symbol: "gold-dragon"
     },
     {
         animation: "spin-four 5s forwards",
-        symbol: "white-dragon"
+        symbol: "fire-bowl"
     },
     {
         animation: "spin-five 5s forwards",
@@ -21,38 +21,38 @@ const reelOneOutcome = [
     },
     {
         animation: "spin-six 5s forwards",
-        symbol: "fire-bowl"
+        symbol: "white-dragon"
     },
     {
         animation: "spin-seven 5s forwards",
-        symbol: "gold-dragon"
+        symbol: "seven"
     },
     {
         animation: "spin-eight 5s forwards",
-        symbol: "white-egg"
+        symbol: "gold-egg"
     },
     {
         animation: "spin-nine 5s forwards",
-        symbol: "jackpot"
-    }
+        symbol: "color-dragon"
+    },
 ]
 
 const reelTwoOutcome = [
     {
         animation: "spin-one 5s .5s forwards",
-        symbol: "gold-dragon"
+        symbol: "jackpot"
     },
     {
         animation: "spin-two 5s .5s forwards",
-        symbol: "color-egg"
+        symbol: "gold-egg"
     },
     {
         animation: "spin-three 5s .5s forwards",
-        symbol: "fire-bowl"
+        symbol: "white-dragon"
     },
     {
         animation: "spin-four 5s .5s forwards",
-        symbol: "color-dragon"
+        symbol: "seven"
     },
     {
         animation: "spin-five 5s .5s forwards",
@@ -60,38 +60,38 @@ const reelTwoOutcome = [
     },
     {
         animation: "spin-six 5s .5s forwards",
-        symbol: "seven"
+        symbol: "color-dragon"
     },
     {
         animation: "spin-seven 5s .5s forwards",
-        symbol: "white-dragon"
+        symbol: "fire-bowl"
     },
     {
         animation: "spin-eight 5s .5s forwards",
-        symbol: "gold-egg"
+        symbol: "color-egg"
     },
     {
         animation: "spin-nine 5s .5s forwards",
-        symbol: "jackpot"
+        symbol: "gold-dragon"
     }
 ]
 
 const reelThreeOutcome = [
     {
         animation: "spin-one 5s 1s forwards",
-        symbol: "white-dragon"
+        symbol: "fire-bowl"
     },
     {
         animation: "spin-two 5s 1s forwards",
-        symbol: "white-egg"
+        symbol: "color-egg"
     },
     {
         animation: "spin-three 5s 1s forwards",
-        symbol: "jackpot"
+        symbol: "color-dragon"
     },
     {
         animation: "spin-four 5s 1s forwards",
-        symbol: "gold-dragon"
+        symbol: "seven"
     },
     {
         animation: "spin-five 5s 1s forwards",
@@ -99,47 +99,21 @@ const reelThreeOutcome = [
     },
     {
         animation: "spin-six 5s 1s forwards",
-        symbol: "seven"
+        symbol: "gold-dragon"
     },
     {
         animation: "spin-seven 5s 1s forwards",
-        symbol: "color-dragon"
+        symbol: "jackpot"
     },
     {
         animation: "spin-eight 5s 1s forwards",
-        symbol: "color-egg"
+        symbol: "white-egg"
     },
     {
         animation: "spin-nine 5s 1s forwards",
-        symbol: "fire-bowl"
+        symbol: "white-dragon"
     }
 ]
-
-let credits = 50;
-// let wager = 0;
-let winnings = 0;
-
-// const oneButton = document.querySelector("#one-credit");
-// oneButton.addEventListener("click", betOne); 
-
-// const twoButton = document.querySelector("#two-credit");
-// twoButton.addEventListener("click", betTwo); 
-
-// const threeButton = document.querySelector("#three-credit");
-// threeButton.addEventListener("click", betThree);
-
-// function betOne() {
-//     credits = credits - 1;
-//     wager = 1;
-// }
-// function betTwo() {
-//     credits = credits - 2;
-//     wager = 2;
-// }
-// function betThree() {
-//     credits = credits - 3;
-//     wager = 3;
-// }
 
 let a = Math.round(Math.random() * (reelOneOutcome.length-1));
 console.log(a);
@@ -149,60 +123,111 @@ let c = Math.round(Math.random() * (reelThreeOutcome.length-1));
 console.log(c);
 
 function spinOne() {
-    console.log("one should spin");
     document.getElementById("reel-one").style.animation = reelOneOutcome[a].animation;
 }
 function spinTwo() {
-    console.log("two should spin");
     document.getElementById("reel-two").style.animation = reelTwoOutcome[b].animation;
 }
 function spinThree() {
-    console.log("three should spin");
     document.getElementById("reel-three").style.animation = reelThreeOutcome[c].animation;
 }
 
+let credits = 50;
+let winnings = 0;
+let win;
 
+function comparePayline() {
+    if (reelOneOutcome[a].symbol === "gold-dragon" && reelTwoOutcome[b].symbol === "gold-dragon" && reelThreeOutcome[c].symbol === "gold-dragon") {
+        win = true;
+        winnings = 5;
+        credits = credits + 5;
+        } else { if (reelOneOutcome[a].symbol === "white-egg" && reelTwoOutcome[b].symbol === "white-egg" && reelThreeOutcome[c].symbol === "white-egg") {
+            win = true;
+            winnings = 125;
+            credits = credits + 125;
+            } else { if (reelOneOutcome[a].symbol === "color-dragon" && reelTwoOutcome[b].symbol === "color-dragon" && reelThreeOutcome[c].symbol === "color-dragon") {
+                win = true;
+                winnings = 25;
+                credits = credits + 25;
+                } else { if (reelOneOutcome[a].symbol === "seven" && reelTwoOutcome[b].symbol === "seven" && reelThreeOutcome[c].symbol === "seven") {
+                    win = true;
+                    winnings = 75;
+                    credits = credits + 75;
+                    } else { if (reelOneOutcome[a].symbol === "white-dragon" && reelTwoOutcome[b].symbol === "white-dragon" && reelThreeOutcome[c].symbol === "white-dragon") {
+                        win = true;
+                        winnings = 1250;
+                        credits = credits + 1250;
+                        } else { if (reelOneOutcome[a].symbol === "jackpot" && reelTwoOutcome[b].symbol === "jackpot" && reelThreeOutcome[c].symbol === "jackpot") {
+                            win = true;
+                            winnings = 15;
+                            credits = credits + 15;
+                            } else { if (reelOneOutcome[a].symbol === "gold-egg" && reelTwoOutcome[b].symbol === "gold-egg" && reelThreeOutcome[c].symbol === "gold-egg") {
+                                win = true;
+                                winnings = 3;
+                                credits = credits + 3;
+                                } else { if (reelOneOutcome[a].symbol === "fire-bowl" && reelTwoOutcome[b].symbol === "fire-bowl" && reelThreeOutcome[c].symbol === "fire-bowl") {
+                                win = true;
+                                winnings = 10;
+                                credits = credits + 10;
+                                    } else { if (reelOneOutcome[a].symbol === "color-egg" && reelTwoOutcome[b].symbol === "color-egg" && reelThreeOutcome[c].symbol === "color-egg") {
+                                    win = true;
+                                    winnings = 1;
+                                    credits = credits + 1;
+                                        } else { if (reelOneOutcome[a].symbol === "wild" && reelTwoOutcome[b].symbol === "wild" && reelThreeOutcome[c].symbol === "wild") {
+                                        win = true;
+                                        winnings = 250;
+                                        credits = credits + 250;
+                                            } else { if (reelOneOutcome[a].symbol === "color-egg" && reelTwoOutcome[b].symbol === "color-egg" && reelThreeOutcome[c].symbol === "color-egg") {
+                                            win = true;
+                                            winnings = 1;
+                                            credits = credits + 1;
+                                                } else {
+                                                win = false;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+function outcome() {
+    if (win === true) {
+        console.log(win);
+        document.getElementById("win").style.display = "flex";
+    } else {
+        if (win === false) {
+            console.log(win);
+            document.getElementById("lose").style.display = "flex";
+        }
+    }
+}
 
 function play() {
     credits = credits-1
     spinOne();
     spinTwo();
     spinThree();
-}
-
-function outcome() {
-    if (win === true) {
-        console.log(win);
-        document.getElementById("outcome-content-win").style.display = "flex";
-    } else {
-        if (win === false) {
-            console.log(win);
-            document.getElementById("outcome-content-lose").style.display = "flex";
-        }
-    }
+    comparePayline();
+    setTimeout(outcome, 6500);
 }
 
 const playButton = document.querySelector("#trigger-round");
 playButton.addEventListener("click", play);
 
-// This could maybe be a for loop? Seems wordy.
-// ALERTS && SPIN (ANIMATION ACTIVE) LISTENER
-
-// function play() {
-//     console.log("Game should start.")
-//     spinOne();
-//     spinTwo();
-//     spinThree();
-//     compareMiddles();
-//     setTimeout(outcome, 500);
-// }
-
-document.getElementById("exit").addEventListener("click", function() {
-    document.getElementById("outcome-content-win").style.display = "none";
-    document.getElementById("outcome-content-lose").style.display = "none";
+document.getElementById("exitwin").addEventListener("click", function() {
+    document.getElementById("win").style.display = "none";
 });
 
-//Need a function to regulary update values along the credit line
+document.getElementById("exitlose").addEventListener("click", function() {
+    document.getElementById("lose").style.display = "none";
+});
+
 setInterval(function() {
     const creditsDisplay = document.getElementById("creditstarget");
     creditstarget.innerHTML = credits;
@@ -220,5 +245,7 @@ document.querySelector("#close").addEventListener("click", function() {
 });
 
 /*----- future features -----*/
+// Wagers
 // Multiplier symbols
 // Sticky symbols
+// Additional Paylines

@@ -1,19 +1,29 @@
 body {
     background-image: linear-gradient(#322335, #c83b81, #ffbd59);
     background-repeat: no-repeat;
-    display: flex;
+    size: 100vh;
+    display: flexbox;
 }
 
-#title {
-    display: flex;
+@font-face {
+    font-family: digital;
+    src: url(../fonts/digital.ttf);
+}
+
+@font-face {
+    font-family: orbitron;
+    src: url(../fonts/orbitron.ttf);
+}
+
+header>img {
+    display: flexbox;
     width: 100%;
 }
 
 .slot-machine {
     display: flex;
-    width: 750px;
-    height: 750px;
     align-items: center;
+    justify-content: center;
 }
 
 .reels {
@@ -21,7 +31,6 @@ body {
     display: inline-flex;
     width: 200px;
     height: 600px;
-    justify-content: space-between;
     border: 30px solid #ffc105;
 }
 
@@ -33,6 +42,7 @@ body {
     background-position-y: 0;
     animation: none;
     border-right: none;
+    border-radius: 25px 0 0 25px;
 }
 
 #reel-two {
@@ -52,14 +62,18 @@ body {
     background-position-x: 0;
     background-position-y: 0;
     animation: none;
+    border-radius: 0 25px 25px 0;
 }
 
 @keyframes spin-one {
     0% {
         background-position-y: 0
     }
+    50% {
+
+    }
     100% {
-        background-position-y: 3800px;
+        background-position-y: 4000px;
     }
 }
 
@@ -68,7 +82,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 4000px;
+        background-position-y: 4200px;
     }
 }
 
@@ -77,7 +91,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 4200px;
+        background-position-y: 4400px;
     }
 }
 
@@ -86,7 +100,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 4400px;
+        background-position-y: 4600px;
     }
 }
 
@@ -95,7 +109,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 4600px;
+        background-position-y: 4800px;
     }
 }
 
@@ -104,7 +118,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 4800px;
+        background-position-y: 5000px;
     }
 }
 
@@ -113,7 +127,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 5000px;
+        background-position-y: 5200px;
     }
 }
 
@@ -122,7 +136,7 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 5200px;
+        background-position-y: 5400px;
     }
 }
 
@@ -131,35 +145,39 @@ body {
         background-position-y: 0
     }
     100% {
-        background-position-y: 5400px;
+        background-position-y: 3800px;
     }
 }
 
 #gamebuttons {
     display: flex;
-    justify-content: flex-end;
 }
 
-.wager {
-    display: flex;
-    flex-direction: column;
+#trigger-round {
+    font-family: digital;
+    font-size: xx-large;
 }
 
 #credits {
-    font-family: "orbitron";
-    text-align: left;
+    font-family: "digital";
     color: white;
     font-size: xx-large;
 }
 
 .display {
-    display: inline;
+    display: inline-flex;
+}
+
+#open-paytable {
+    font-family: digital;
+    font-size: x-large
 }
 
 .paytable {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,13 +185,13 @@ body {
 }
 
 .paytable-content {
-    height: 1000px;
+    height: 50vh;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
 
 .paytable-content>img {
-    height: 1000px;
+    height: 500px;
 }
 
 #close {
@@ -187,28 +205,48 @@ body {
     cursor: default;
 }
 
-#outcome-content-win {
-    grid-area: buttons;
+#win {
     width: 100%;
     height: 100%;
     position: absolute;
+    font-family: digital;
+    color: #322335;
+    top: 50%;
+    left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
 }
 
-#outcome-content-lose {
+
+#exitwin {
+    position: absolute;
+    color: black;
+    top: 60px;
+    right: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    transform: rotate(45deg);
+    cursor: default;
+}
+
+
+#lose {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: static;
+    font-family: digital;
+    color: #322335;
+    top: 50%;
+    left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
 }
 
-#exit {
+#exitlose {
     position: absolute;
     color: black;
     top: 60px;
