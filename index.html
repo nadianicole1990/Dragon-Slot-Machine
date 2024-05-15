@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img id="title" src="/images/slay-to-win.png">
+        <img id="title" src="./images/slay-to-win.png">
     </header>
     <div class="slot-machine">
         <div class="reels" id="reel-one">
@@ -21,35 +21,34 @@
         <div class="reels" id="reel-three">
             <div id="three"></div>
         </div>
-    </div>
-    <div id="gamebuttons">
-        <div id="play-game">
-            <button id="trigger-round">Play!</button>
+        <div class="win-modal">
+            <div id="win-content">
+                <h>YOU ARE ON FIRE!</h>
+                <div id="exitwin">+</div>
+            </div>
         </div>
-    <div id="credits">
+        <div class="lose-modal">
+            <div id="lose-content">
+                <h>HARSH BURN! BETTER LUCK NEXT TIME.</h>
+                <div id="exitlose">+</div>
+            </div>
+            </div>
+        <div class="paytable-modal">
+            <div class="paytable-content">
+                <div id="close">+</div>
+                <img src="./images/dragon-paytable-amended.png"/>
+            </div>
+        </div>
+        <div class="gamebuttons">
+            <button id="trigger-round">PLAY!</button>
+            <button id="open-paytable">PAYTABLE</button>
+        </div>
+    </div>
+    <footer id="credits">
         <p class="display"><b>Credits:<b></p>
         <div class="display" id="creditstarget"></div>
-        <p class="display">Most Recent Win:</p>
+        <p class="display">Last Win:</p>
         <div class="display" id="winningstarget"></div>
-    </div>
-    <div class="outcome-modal">
-        <div id="win">
-            <h>YOU ARE ON FIRE!</h>
-            <div id="exitwin">+</div>
-        </div>
-        <div id="lose">
-            <h>YOU BURNED OUT, BETTER LUCK NEXT TIME.</h>
-            <div id="exitlose">+</div>
-        </div>
-    </div>
-    <div id="paytable-modal">
-        <button id="open-paytable">Paytable</button>
-        <div class="paytable">
-            <div class="paytable-content">
-                <img src="/images/dragon-paytable-amended.png"/>
-            </div>
-            <div id="close">+</div>
-        </div>
-    </div>
+        </footer>
 </body>
 </html>

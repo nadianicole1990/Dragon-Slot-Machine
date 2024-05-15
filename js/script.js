@@ -199,11 +199,11 @@ function comparePayline() {
 function outcome() {
     if (win === true) {
         console.log(win);
-        document.getElementById("win").style.display = "flex";
+        document.querySelector(".win-modal").style.display = "flex";
     } else {
         if (win === false) {
             console.log(win);
-            document.getElementById("lose").style.display = "flex";
+            document.querySelector(".lose-modal").style.display = "flex";
         }
     }
 }
@@ -213,19 +213,28 @@ function play() {
     spinOne();
     spinTwo();
     spinThree();
-    comparePayline();
+    setTimeout(comparePayline, 6500);
     setTimeout(outcome, 6500);
 }
 
 const playButton = document.querySelector("#trigger-round");
 playButton.addEventListener("click", play);
 
+function reset() {
+    document.getElementById("reel-one").style.animation = none;
+    document.getElementById("reel-one").style.animation = none;
+    document.getElementById("reel-one").style.animation = none;
+    winnings = 0;
+}
+
 document.getElementById("exitwin").addEventListener("click", function() {
-    document.getElementById("win").style.display = "none";
+    document.querySelector(".win-modal").style.display = "none";
+    reset();
 });
 
 document.getElementById("exitlose").addEventListener("click", function() {
-    document.getElementById("lose").style.display = "none";
+    document.querySelector(".lose-modal").style.display = "none";
+    reset();
 });
 
 setInterval(function() {
@@ -236,8 +245,8 @@ setInterval(function() {
 }, 500)
 
 document.getElementById("open-paytable").addEventListener("click", function() {
-    document.querySelector(".paytable").style.display = "flex";
+    document.querySelector(".paytable-modal").style.display = "flex";
 });
 document.querySelector("#close").addEventListener("click", function() {
-    document.querySelector(".paytable").style.display = "none";
+    document.querySelector(".paytable-modal").style.display = "none";
 });

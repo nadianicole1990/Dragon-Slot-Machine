@@ -1,7 +1,7 @@
 body {
     background-image: linear-gradient(#322335, #c83b81, #ffbd59);
     background-repeat: no-repeat;
-    size: 100vh;
+    size: 100%;
     display: flexbox;
 }
 
@@ -24,12 +24,13 @@ header>img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 }
 
 .reels {
     background-color: #ffc105;
     display: inline-flex;
+    justify-content: center;
     width: 200px;
     height: 600px;
     border: 30px solid #ffc105;
@@ -150,33 +151,59 @@ header>img {
     }
 }
 
-#gamebuttons {
+.gamebuttons {
     display: flex;
+    flex-direction: column;
+}
+
+#open-paytable {
+    font-family: orbitron;
+    font-size: 30px;
+    background-color: white;
+    color: #322335;
+    border: 3px solid #322335;
+    border-radius: 5px;
+    margin: 20px;
 }
 
 #trigger-round {
-    font-family: digital;
-    font-size: xx-large;
+    font-family: orbitron;
+    font-size: 50px;
+    background-color: white;
+    color: #322335;
+    border: 3px solid #322335;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
 }
 
 #credits {
+    display: flexbox;
+    width: 100%;
     font-family: "digital";
     color: white;
     font-size: xx-large;
+    text-align: center;
 }
 
 .display {
     display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-#open-paytable {
-    font-family: digital;
-    font-size: x-large
+#creditstarget {
+    color: #322335;
 }
 
-.paytable {
+#winningstarget {
+    color: #322335;
+}
+
+.paytable-modal {
     width: 100%;
     height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     display: flex;
@@ -186,9 +213,8 @@ header>img {
 }
 
 .paytable-content {
-    height: 50vh;
-    text-align: center;
-    position: absolute;
+    width: 600px;
+    position: relative;
 }
 
 .paytable-content>img {
@@ -196,63 +222,81 @@ header>img {
 }
 
 #close {
-    position: absolute;
-    color: black;
-    top: 60px;
-    right: 60px;
+    color: #322335;
     font-size: 40px;
+    font-family: orbitron;
+    position: absolute;
+    right: 55px;
+    top: 55px;
     font-weight: bolder;
     transform: rotate(45deg);
     cursor: default;
 }
 
-#win {
+.win-modal {
     width: 100%;
     height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
     position: absolute;
-    font-family: digital;
-    color: #322335;
-    top: 50%;
-    left: 50%;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
+}
+
+#win-content {
+    width: 500px;
+    width: 500px;
+    color: white;
+    font-size: xx-large;
+    font-family: orbitron;
+    text-align: center;
+    position: relative;
 }
 
 
 #exitwin {
     position: absolute;
-    color: black;
-    top: 60px;
-    right: 60px;
+    color: white;
     font-size: 40px;
+    font-family: orbitron;
+    top: -50px;
+    right: -50px;
     font-weight: bolder;
     transform: rotate(45deg);
     cursor: default;
 }
 
-
-#lose {
+.lose-modal {
     width: 100%;
     height: 100%;
-    position: static;
-    font-family: digital;
-    color: #322335;
-    top: 50%;
-    left: 50%;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
 }
 
+#lose-content {
+    width: 500px;
+    width: 500px;
+    color: white;
+    font-size: xx-large;
+    font-family: orbitron;
+    text-align: center;
+    position: relative;
+}
+
 #exitlose {
     position: absolute;
-    color: black;
-    top: 60px;
-    right: 60px;
+    color: white;
     font-size: 40px;
+    font-family: orbitron;
+    top: -50px;
+    right: -50px;
     font-weight: bolder;
     transform: rotate(45deg);
     cursor: default;
