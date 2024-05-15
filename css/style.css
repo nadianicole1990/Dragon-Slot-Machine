@@ -67,6 +67,12 @@ header>img {
     border-radius: 0 25px 25px 0;
 }
 
+@keyframes reset {
+    100% {
+        background-position-y: 0;
+    }
+}
+
 @keyframes spin-one {
     0% {
         background-position-y: 0
