@@ -7,12 +7,12 @@ body {
 
 @font-face {
     font-family: digital;
-    src: url(../fonts/digital.ttf);
+    src: url(./fonts/digital.ttf);
 }
 
 @font-face {
     font-family: orbitron;
-    src: url(../fonts/orbitron.ttf);
+    src: url(./fonts/orbitron.ttf);
 }
 
 header>img {
@@ -35,7 +35,7 @@ header>img {
 }
 
 #reel-one {
-    background-image: url(../images/reel-one.png);
+    background-image: url(./images/reel-one.png);
     background-size: 200px;
     background-repeat: repeat-y;
     background-position-x: 0;
@@ -46,7 +46,7 @@ header>img {
 }
 
 #reel-two {
-    background-image: url(../images/reel-two.png);
+    background-image: url(./images/reel-two.png);
     background-size: 200px;
     background-repeat: repeat-y;
     background-position-x: 0;
@@ -56,7 +56,7 @@ header>img {
 }
 
 #reel-three {
-    background-image: url(../images/reel-three.png);
+    background-image: url(./images/reel-three.png);
     background-size: 200px;
     background-repeat: repeat-y;
     background-position-x: 0;

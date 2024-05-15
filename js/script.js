@@ -243,9 +243,3 @@ document.getElementById("open-paytable").addEventListener("click", function() {
 document.querySelector("#close").addEventListener("click", function() {
     document.querySelector(".paytable").style.display = "none";
 });
-
-/*----- future features -----*/
-// Wagers
-// Multiplier symbols
-// Sticky symbols
-// Additional Paylines
