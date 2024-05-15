@@ -49,11 +49,9 @@ An Exciting, Dragon-Themed Game of Chance that Mimics Early Slot Machines.
 * If unable to view please go live locally through VS Code
 
 ## <a name="author"></a> About the Author
+Nadia is a quirky, fledgling developer with a colorful background in hospitality, manufacturing, and wellness.
 
 ## <a name="workscited"></a> Works Cited  
-For help with CSS animations:
-* https://www.w3schools.com/
-For reel-specific inspiration:
-* https://www.youtube.com/watch?v=boI2B4Gpp34
-For creating modals:
-* https://www.youtube.com/watch?v=gLWIYk0Sd38
+* For help with CSS animations: https://www.w3schools.com/
+* For reel-specific inspiration: https://www.youtube.com/watch?v=boI2B4Gpp34
+* For creating modals: https://www.youtube.com/watch?v=gLWIYk0Sd38
